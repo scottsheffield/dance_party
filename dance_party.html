@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<style>
+			h1 {
+				font-family: Helvetica, Arial, sans-serif;
+				font-size: 4.5em;
+				margin-bottom: 20px;
+				font-weight: 300;
+			}
+			#content {
+				margin: auto;
+				width: 550px;
+				padding: 50px 20px 0 20px;
+			}
+			p {
+				font-family: Helvetica, Arial, sans-serif;
+				line-height: 30px;
+			}
+			.dance-party {
+				font-size: 30px;
+				font-weight: 300;
+			}
+			sup {
+				color: blue;
+				font-size: 12px;
+				padding-left: 4px;
+				line-height: 10px;
+			}
+			#bookmarklet {
+				transition: 0.5s;
+				margin-left: 200px;
+			    padding: 10px 15px;
+			    background: #4479BA;
+			    color: #FFF;
+			    -webkit-border-radius: 4px;
+			    -moz-border-radius: 4px;
+			    border-radius: 4px;
+			    border: solid 1px #20538D;
+			    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+			    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+			    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+			    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+			    text-decoration: none;
+			}
+			#bookmarklet:hover {
+				background: #558ACB;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			<h1>Dance-Ass Party</h1>
+
+			<p>Is your day super boring? Not enough party on that government website about stuff? Well, now you can fix that, with the all new&hellip;</p>
+
+			<p class="dance-party">Dance Party Bookmarklet<sup>(still totally in beta)</sup>!</p>
+
+			<p>Just drag the button below to your bookmarks toolbar and click it on any site that doesn't have enough party for you. Also, use Chrome, weirdo.</p>
+
+			<p>
+				<a id="bookmarklet" href="javascript:(function(){var body=document.getElementsByTagName('body')[0],prevBackground=body.style.background,prevWindowBackground,audio=document.createElement('audio'),strobeMe;if(window.body){prevWindowBackground=window.body.style.background;}function ohGodItsKickingIn(){audio.play();setTimeout(function(){strobeMe=setInterval(function(){var strobeColor='rgb('+Math.floor(Math.random()*155+100)+','+Math.floor(Math.random()*155+100)+','+Math.floor(Math.random()*155+100)+')';body.style.background=strobeColor;if(window.body){window.body.style.background=strobeColor;}},63.02083325);},4050);setTimeout(function(){clearInterval(strobeMe);body.style.background=prevBackground;if(window.body){window.body.style.background=prevWindowBackground;}},106000);}audio.addEventListener('loadedmetadata',ohGodItsKickingIn,false);body.appendChild(audio);audio.src=&quot;http://georgeandjonathan.com/thebestmusic/mp3/5.mp3&quot;;})();">Dance Party</a>
+			</p>
+		</div>
+		<script>
+			var me = document.getElementsByTagName('h1')[0],
+				toggle = true,
+				strobeMe = setInterval(function () {
+					var strobeColor = 'rgb(' + Math.floor(Math.random() * 155 + 100) + ',' + Math.floor(Math.random() * 155 + 100) + ',' + Math.floor(Math.random() * 155 + 100) + ')';
+					me.style.color = strobeColor;
+				}, 15.755208312),
+				hyphenMe = setInterval(function () {
+					me.innerText = toggle ? "Dance-Ass Party" : "Dance Ass-Party";
+					toggle = !toggle;
+				}, 252.083332992);
+		</script>
+	</body>
+</html>
